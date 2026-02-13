@@ -1,0 +1,17 @@
+services:
+  landing:
+    build: .
+    container_name: agentpen-landing
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.agentpen.rule=Host(`agentpen.io`) || Host(`www.agentpen.io`)"
+      - "traefik.http.routers.agentpen.entrypoints=websecure"
+      - "traefik.http.routers.agentpen.tls.certresolver=letsencrypt"
+      - "traefik.http.services.agentpen.loadbalancer.server.port=80"
+    networks:
+      - getsheetapi_web
+
+networks:
+  getsheetapi_web:
+    external: true

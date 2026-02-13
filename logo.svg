@@ -1,0 +1,45 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0F"/>
+      <stop offset="100%" style="stop-color:#12121A"/>
+    </linearGradient>
+    <linearGradient id="penGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F0FF"/>
+      <stop offset="100%" style="stop-color:#FF00AA"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F0FF;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#FF00AA;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="200" fill="url(#bgGrad)"/>
+  
+  <!-- Glow effect -->
+  <circle cx="512" cy="512" r="300" fill="url(#glowGrad)" filter="blur(60px)"/>
+  
+  <!-- Pen icon - stylized -->
+  <g transform="translate(262, 212)">
+    <!-- Pen body -->
+    <path d="M400 100 L480 180 L180 480 L100 500 L120 420 L400 100Z" 
+          stroke="url(#penGrad)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Pen tip -->
+    <path d="M120 420 L100 500 L180 480" 
+          fill="url(#penGrad)"/>
+    <!-- Edit lines -->
+    <path d="M380 120 L460 200" 
+          stroke="url(#penGrad)" stroke-width="40" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Agent dots orbiting -->
+  <circle cx="300" cy="300" r="24" fill="#00F0FF"/>
+  <circle cx="724" cy="300" r="24" fill="#FF00AA"/>
+  <circle cx="512" cy="750" r="24" fill="#8B5CF6"/>
+  
+  <!-- Connection lines -->
+  <path d="M324 312 L488 500" stroke="#00F0FF" stroke-width="3" opacity="0.5"/>
+  <path d="M700 312 L536 500" stroke="#FF00AA" stroke-width="3" opacity="0.5"/>
+  <path d="M512 726 L512 550" stroke="#8B5CF6" stroke-width="3" opacity="0.5"/>
+</svg>
